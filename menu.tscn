@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://by0y5v0gwn2q6"]
+
+[ext_resource type="Texture2D" uid="uid://cr883lmk180y4" path="res://Assets Godot Runner/background.png" id="1_ouk20"]
+[ext_resource type="FontFile" uid="uid://dbvg08lwcv56h" path="res://Assets Godot Runner/PressStart2P-Regular.ttf" id="2_mae5d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hy44"]
+texture = ExtResource("1_ouk20")
+
+[node name="Menu" type="Control" unique_id=915493497]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fundo" type="Panel" parent="." unique_id=141069875]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4hy44")
+
+[node name="Titulo" type="Label" parent="." unique_id=62459220]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 182.0
+offset_top = 92.0
+offset_right = 182.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("2_mae5d")
+theme_override_font_sizes/font_size = 136
+text = "Runner"
+
+[node name="Botões" type="VBoxContainer" parent="." unique_id=803830566]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Jogar" type="Button" parent="Botões" unique_id=214154194]
+layout_mode = 2
+
+[node name="Sair" type="Button" parent="Botões" unique_id=336581145]
+layout_mode = 2
