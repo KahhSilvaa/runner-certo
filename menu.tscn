@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://by0y5v0gwn2q6"]
 
+[ext_resource type="Script" uid="uid://rcuc4257pm8u" path="res://menu.gd" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://cr883lmk180y4" path="res://Assets Godot Runner/background.png" id="1_ouk20"]
 [ext_resource type="FontFile" uid="uid://dbvg08lwcv56h" path="res://Assets Godot Runner/PressStart2P-Regular.ttf" id="2_mae5d"]
 
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mae5d")
 
 [node name="Fundo" type="Panel" parent="." unique_id=141069875]
 layout_mode = 1
@@ -78,3 +80,6 @@ theme_override_fonts/font = ExtResource("2_mae5d")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/normal = SubResource("StyleBoxFlat_mae5d")
 text = "Sair"
+
+[connection signal="pressed" from="Botões/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Botões/Sair" to="." method="_on_sair_pressed"]
