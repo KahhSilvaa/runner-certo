@@ -3,36 +3,158 @@
 [ext_resource type="Script" uid="uid://ov18bxae4n4" path="res://jogo.gd" id="1_yq54j"]
 [ext_resource type="Texture2D" uid="uid://cr883lmk180y4" path="res://Assets Godot Runner/background.png" id="2_1ap6j"]
 [ext_resource type="Texture2D" uid="uid://ce67mnwtj4grd" path="res://Assets Godot Runner/foreground.png" id="3_qn35j"]
+[ext_resource type="Texture2D" uid="uid://ddjta6ggtey8r" path="res://Assets Godot Runner/middleground2.png" id="4_qn35j"]
+[ext_resource type="Texture2D" uid="uid://bwshv4wrxqvl7" path="res://Assets Godot Runner/middleground1.png" id="5_8c340"]
+[ext_resource type="Script" uid="uid://jucwcpncipma" path="res://character_body_2d.gd" id="6_45nkh"]
+[ext_resource type="Texture2D" uid="uid://dq57cyr6ths2n" path="res://Assets Godot Runner/player.png" id="7_ysdx3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8c340"]
+size = Vector2(1151, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8pok"]
+size = Vector2(60, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtw28"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orj5g"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01kpq"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ka1p"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rhuj"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msvki"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qew1n"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlqx7"]
+atlas = ExtResource("7_ysdx3")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwd3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtw28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orj5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01kpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ka1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rhuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msvki")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qew1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlqx7")
+}],
+"loop": true,
+"name": &"pular",
+"speed": 5.0
+}]
 
 [node name="jogo" type="Node2D" unique_id=983908068]
 script = ExtResource("1_yq54j")
 
 [node name="fundo" type="Sprite2D" parent="." unique_id=2130850443]
-scale = Vector2(2, 3.5944443)
+texture_filter = 1
+position = Vector2(1152, 0)
+scale = Vector2(3.6187496, 3.6)
 texture = ExtResource("2_1ap6j")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="fundo2" type="Sprite2D" parent="." unique_id=1781900436]
-position = Vector2(638.00006, -1)
-scale = Vector2(1.6062498, 3.6)
+texture_filter = 1
+scale = Vector2(3.603, 3.6)
 texture = ExtResource("2_1ap6j")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="chao" type="Sprite2D" parent="." unique_id=1384127174]
-position = Vector2(637, 581)
-scale = Vector2(1.609375, 1.4062494)
+texture_filter = 1
+position = Vector2(1153, 581)
+scale = Vector2(3.6281247, 1.4062494)
 texture = ExtResource("3_qn35j")
 centered = false
 
 [node name="chao2" type="Sprite2D" parent="." unique_id=1830945799]
-position = Vector2(-2, 581)
-scale = Vector2(2, 1.40625)
+texture_filter = 1
+position = Vector2(2.0000002, 581.00006)
+scale = Vector2(3.596875, 1.40625)
 texture = ExtResource("3_qn35j")
 centered = false
 
 [node name="chaofisico" type="StaticBody2D" parent="." unique_id=1771074664]
 
 [node name="corpochao" type="CollisionShape2D" parent="chaofisico" unique_id=1561772366]
+position = Vector2(574.5, 624.5)
 shape = SubResource("RectangleShape2D_8c340")
+
+[node name="MeioAzul" type="Sprite2D" parent="." unique_id=1524087547]
+texture_filter = 1
+position = Vector2(1729, 300.00003)
+scale = Vector2(3.6187503, 3.3333333)
+texture = ExtResource("4_qn35j")
+
+[node name="MeioAzul2" type="Sprite2D" parent="." unique_id=1068105535]
+texture_filter = 1
+position = Vector2(577, 302)
+scale = Vector2(3.60625, 3.3555558)
+texture = ExtResource("4_qn35j")
+
+[node name="MeioPreto" type="Sprite2D" parent="." unique_id=1502051577]
+texture_filter = 1
+position = Vector2(578.5, 302.5)
+scale = Vector2(3.5968747, 3.35)
+texture = ExtResource("5_8c340")
+
+[node name="MeioPreto2" type="Sprite2D" parent="." unique_id=392903610]
+texture_filter = 1
+position = Vector2(1735, 299)
+scale = Vector2(3.5999997, 3.3555555)
+texture = ExtResource("5_8c340")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=388068321]
+script = ExtResource("6_45nkh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=168946394]
+position = Vector2(251, 558.5)
+shape = SubResource("RectangleShape2D_t8pok")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=922893597]
+texture_filter = 1
+position = Vector2(249.25, 575)
+scale = Vector2(2.3229163, 3.6041665)
+sprite_frames = SubResource("SpriteFrames_dwd3o")
+animation = &"pular"
