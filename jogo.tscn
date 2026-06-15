@@ -103,47 +103,51 @@ metadata/_edit_lock_ = true
 
 [node name="chao" type="Sprite2D" parent="." unique_id=1384127174]
 texture_filter = 1
-position = Vector2(1153, 581)
+position = Vector2(1148, 581)
 scale = Vector2(3.6281247, 1.4062494)
 texture = ExtResource("3_qn35j")
 centered = false
 
 [node name="chao2" type="Sprite2D" parent="." unique_id=1830945799]
 texture_filter = 1
-position = Vector2(2.0000002, 581.00006)
-scale = Vector2(3.596875, 1.40625)
+position = Vector2(1.0000001, 581)
+scale = Vector2(3.5843751, 1.4062501)
 texture = ExtResource("3_qn35j")
 centered = false
 
 [node name="chaofisico" type="StaticBody2D" parent="." unique_id=1771074664]
 
 [node name="corpochao" type="CollisionShape2D" parent="chaofisico" unique_id=1561772366]
-position = Vector2(574.5, 624.5)
+position = Vector2(576, 626)
 shape = SubResource("RectangleShape2D_8c340")
 
 [node name="MeioAzul" type="Sprite2D" parent="." unique_id=1524087547]
 texture_filter = 1
-position = Vector2(1729, 300.00003)
-scale = Vector2(3.6187503, 3.3333333)
+position = Vector2(1145, 1)
+scale = Vector2(3.644531, 3.3597221)
 texture = ExtResource("4_qn35j")
+centered = false
 
 [node name="MeioAzul2" type="Sprite2D" parent="." unique_id=1068105535]
 texture_filter = 1
-position = Vector2(577, 302)
+position = Vector2(-2, 1)
 scale = Vector2(3.60625, 3.3555558)
 texture = ExtResource("4_qn35j")
+centered = false
 
 [node name="MeioPreto" type="Sprite2D" parent="." unique_id=1502051577]
 texture_filter = 1
-position = Vector2(578.5, 302.5)
+position = Vector2(3, 1.9999999)
 scale = Vector2(3.5968747, 3.35)
 texture = ExtResource("5_8c340")
+centered = false
 
 [node name="MeioPreto2" type="Sprite2D" parent="." unique_id=392903610]
 texture_filter = 1
-position = Vector2(1735, 299)
+position = Vector2(1151.0001, 1)
 scale = Vector2(3.5999997, 3.3555555)
 texture = ExtResource("5_8c340")
+centered = false
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=388068321]
 script = ExtResource("6_45nkh")
