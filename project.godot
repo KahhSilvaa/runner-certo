@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Runner certo"
-run/main_scene="uid://by0y5v0gwn2q6"
+config/name="Runner"
+run/main_scene="uid://bkb16gm4f73x5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -26,4 +26,5 @@ window/stretch/aspect="expand"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
